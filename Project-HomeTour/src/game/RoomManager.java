@@ -43,7 +43,7 @@ public class RoomManager {
 		Room foyer = new Room("foyer", "A small foyer",
 				"\nOn the wall left of the front door, there is a hanging coat rack. \n\n*** A dining room is open to the south, where a wooden table can be seen."
 						+ "\n*** The hardwood floor leads west into a small space with a small decorative bench, \nnext to a staircase that leads up to a second floor."
-						+ "\n*** To the north is a small room, where you can see a piano.");
+						+ "\n*** To the north is a warmly lit room, where you can see a piano.");
 		rooms[0] = foyer;
 		setStartingRoom(foyer);
 

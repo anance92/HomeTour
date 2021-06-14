@@ -125,9 +125,7 @@ public class Main {
 					action = "incorrect";
 					System.out.println("You can't go this way. Please enter another direction.");
 				}
-			} else if (command[i].equalsIgnoreCase("go")) {
-				System.out.println("here we go"); 
-			} else {
+			} else if (!command[i].equalsIgnoreCase("go")){
 				action = "incorrect";
 				System.out.println("Please try again!");
 			}
