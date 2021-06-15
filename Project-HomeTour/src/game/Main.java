@@ -35,6 +35,21 @@ public class Main {
 					playing = false;
 					break;
 				}
+				case "play": {
+					System.out.println("\nYou've decided to play the baby grand piano.");
+					System.out.println("You sit and strike a few keys and notice that the piano needs to be tuned.");
+					System.out.println(player.getCurrentRoom().getLongDescription());
+					break;
+				}
+				case "read": {
+					System.out.println("\nYou've decided to read a book.");
+					System.out.println("You grab a book off the shelf and notice the cover is very worn.");
+					System.out.println("You open it and find a scribbled note on the inner cover. It reads...");
+					System.out.println("\n\t\tTo Caroline, you will forev...");
+					System.out.println("\nThe rest is illegible.");
+					System.out.println(player.getCurrentRoom().getLongDescription());
+					break;
+				}
 				case "go": {
 					switch (direction) {
 					case "west": {
@@ -89,6 +104,12 @@ public class Main {
 		for (int i = 0; i < command.length; i++) {
 			if (command[i].equalsIgnoreCase("quit")) {
 				action = "quit";
+			} else if (command[i].equalsIgnoreCase("play")) {
+				action = "play";
+				break;
+			} else if (command[i].equalsIgnoreCase("read")) {
+				action = "read";
+				break;
 			} else if (command[i].equalsIgnoreCase("west")) {
 				if (player.getCurrentRoom().getExit(currentRoom, "west") != null) {
 					action = "go";
@@ -125,7 +146,7 @@ public class Main {
 					action = "incorrect";
 					System.out.println("You can't go this way. Please enter another direction.");
 				}
-			} else if (!command[i].equalsIgnoreCase("go")){
+			} else if (!command[i].equalsIgnoreCase("go")) {
 				action = "incorrect";
 				System.out.println("Please try again!");
 			}
